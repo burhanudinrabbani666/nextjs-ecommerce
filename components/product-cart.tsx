@@ -1,3 +1,4 @@
+import { formatPrice } from "@/lib/utils";
 import { Product } from "@/mocks";
 import Image from "next/image";
 
@@ -22,9 +23,9 @@ export function ProductCart({ product }: { product: Product }) {
             </div>
             <h2 className="text-lg font-semibold">{product.name}</h2>
             <p className="text-gray-600">
-                ${product.price.toFixed(2)}
+                {formatPrice(product.price)}
             </p>
-            <p className="text-gray-500">${product.description}</p>
+            <p className="text-gray-500">{product.description}</p>
         </div>
     );
 }
