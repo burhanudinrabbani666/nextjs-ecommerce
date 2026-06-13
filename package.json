@@ -7,7 +7,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "eslint"
+        "lint": "eslint",
+        "db:seed": "npx prisma db seed"
     },
     "dependencies": {
         "@prisma/adapter-pg": "^7.8.0",
@@ -16,7 +17,8 @@
         "next": "16.2.9",
         "pg": "^8.21.0",
         "react": "19.2.4",
-        "react-dom": "19.2.4"
+        "react-dom": "19.2.4",
+        "slugify": "^1.6.9"
     },
     "devDependencies": {
         "@tailwindcss/postcss": "^4",
@@ -29,6 +31,7 @@
         "prettier": "^3.8.4",
         "prisma": "^7.8.0",
         "tailwindcss": "^4",
+        "tsx": "^4.22.4",
         "typescript": "^5"
     }
 }

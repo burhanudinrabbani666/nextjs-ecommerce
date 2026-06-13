@@ -1,5 +1,5 @@
 import { ProductCart } from "@/components/product-cart";
-import { mockProducts } from "@/mocks";
+import { mockProducts } from "@/lib/mocks";
 
 export default function Home() {
     return (

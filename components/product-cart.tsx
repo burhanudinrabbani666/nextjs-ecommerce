@@ -1,5 +1,5 @@
 import { formatPrice } from "@/lib/utils";
-import { Product } from "@/mocks";
+import { Product } from "@/lib/mocks";
 import Image from "next/image";
 
 /**

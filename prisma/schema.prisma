@@ -12,3 +12,27 @@ datasource db {
   provider = "postgresql"
 }
 
+model Product {
+  id String @id @default(cuid())
+
+  name        String
+  slug        String  @unique
+  description String?
+  price       Decimal @db.Decimal(10, 2)
+  image       String
+  visible     Boolean @default(true)
+
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now())
+}
+
+model Category {
+  id   String @id @default(cuid())
+  name String
+  slug String @unique
+
+  products Product[]
+}
